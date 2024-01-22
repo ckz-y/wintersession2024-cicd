@@ -45,5 +45,5 @@ jobs:
       - name: This step generates output
         id: step-with-output 
         run: echo "some_variable=something" >> $GITHUB_OUTPUT
-      - run: echo "${{ steps.step-with-output.some-variable }}"
+      - run: echo "${{ steps.step-with-output.outputs.some-variable }}"
   
