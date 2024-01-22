@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Install Python package
@@ -44,6 +44,6 @@ jobs:
         run: echo "This is Linux"
       - name: This step generates output
         id: step-with-output 
-        run: echo "some_variable=something" >> $GITHUB_OUTPUT
+        run: echo "some-variable=something" >> $GITHUB_OUTPUT
       - run: echo "${{ steps.step-with-output.outputs.some-variable }}"
   
